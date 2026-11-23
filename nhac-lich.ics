@@ -1,0 +1,104 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Thiep cuoi Duc Hoa - Thuy Hang//VI
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Tiệc cưới Đức Hoà & Thuý Hằng
+X-WR-TIMEZONE:Asia/Ho_Chi_Minh
+BEGIN:VEVENT
+UID:tiec-cuoi-20261229@thiepcuoi.aiglobalvn.com
+DTSTAMP:20261123T030603Z
+DTSTART:20261229T041500Z
+DTEND:20261229T070000Z
+SUMMARY:Tiệc cưới Đức Hoà & Thuý Hằng
+LOCATION:Khách Sạn Giao Tế (Tầng 2\, Sảnh 6)\, Số 09 Hồ Tùng 
+ Mậu\, phường Hưng Bình\, TP. Vinh\, Nghệ An
+DESCRIPTION:Tiệc cưới Đức Hoà & Thuý Hằng lúc 11:15\, Thứ Ba
+  29/12/2026 (tức 21/11 năm Bính Ngọ) tại Khách Sạn Giao Tế\, 
+ Tầng 2\, Sảnh 6\, Số 09 Hồ Tùng Mậu\, TP. Vinh.\nThiệp mời:
+  https://thiepcuoi.aiglobalvn.com/
+URL:https://thiepcuoi.aiglobalvn.com/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Ngày mai là tiệc cưới Đức Hoà & Thuý Hằng (11:15)
+TRIGGER:-P1D
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:11:15 hôm nay: tiệc cưới Đức Hoà & Thuý Hằng
+TRIGGER:-PT2H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nhac-truoc-30-ngay-20261229@thiepcuoi.aiglobalvn.com
+DTSTAMP:20261123T030603Z
+DTSTART:20261129T020000Z
+DTEND:20261129T021500Z
+SUMMARY:Còn 30 ngày: tiệc cưới Đức Hoà & Thuý Hằng
+DESCRIPTION:Tiệc cưới Đức Hoà & Thuý Hằng lúc 11:15\, Thứ Ba
+  29/12/2026 (tức 21/11 năm Bính Ngọ) tại Khách Sạn Giao Tế\, 
+ Tầng 2\, Sảnh 6\, Số 09 Hồ Tùng Mậu\, TP. Vinh.\nThiệp mời:
+  https://thiepcuoi.aiglobalvn.com/
+URL:https://thiepcuoi.aiglobalvn.com/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Còn 30 ngày: tiệc cưới Đức Hoà & Thuý Hằng
+TRIGGER:PT0M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nhac-truoc-20-ngay-20261229@thiepcuoi.aiglobalvn.com
+DTSTAMP:20261123T030603Z
+DTSTART:20261209T020000Z
+DTEND:20261209T021500Z
+SUMMARY:Còn 20 ngày: tiệc cưới Đức Hoà & Thuý Hằng
+DESCRIPTION:Tiệc cưới Đức Hoà & Thuý Hằng lúc 11:15\, Thứ Ba
+  29/12/2026 (tức 21/11 năm Bính Ngọ) tại Khách Sạn Giao Tế\, 
+ Tầng 2\, Sảnh 6\, Số 09 Hồ Tùng Mậu\, TP. Vinh.\nThiệp mời:
+  https://thiepcuoi.aiglobalvn.com/
+URL:https://thiepcuoi.aiglobalvn.com/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Còn 20 ngày: tiệc cưới Đức Hoà & Thuý Hằng
+TRIGGER:PT0M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nhac-truoc-10-ngay-20261229@thiepcuoi.aiglobalvn.com
+DTSTAMP:20261123T030603Z
+DTSTART:20261219T020000Z
+DTEND:20261219T021500Z
+SUMMARY:Còn 10 ngày: tiệc cưới Đức Hoà & Thuý Hằng
+DESCRIPTION:Tiệc cưới Đức Hoà & Thuý Hằng lúc 11:15\, Thứ Ba
+  29/12/2026 (tức 21/11 năm Bính Ngọ) tại Khách Sạn Giao Tế\, 
+ Tầng 2\, Sảnh 6\, Số 09 Hồ Tùng Mậu\, TP. Vinh.\nThiệp mời:
+  https://thiepcuoi.aiglobalvn.com/
+URL:https://thiepcuoi.aiglobalvn.com/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Còn 10 ngày: tiệc cưới Đức Hoà & Thuý Hằng
+TRIGGER:PT0M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:nhac-truoc-3-ngay-20261229@thiepcuoi.aiglobalvn.com
+DTSTAMP:20261123T030603Z
+DTSTART:20261226T020000Z
+DTEND:20261226T021500Z
+SUMMARY:Còn 3 ngày: tiệc cưới Đức Hoà & Thuý Hằng
+DESCRIPTION:Tiệc cưới Đức Hoà & Thuý Hằng lúc 11:15\, Thứ Ba
+  29/12/2026 (tức 21/11 năm Bính Ngọ) tại Khách Sạn Giao Tế\, 
+ Tầng 2\, Sảnh 6\, Số 09 Hồ Tùng Mậu\, TP. Vinh.\nThiệp mời:
+  https://thiepcuoi.aiglobalvn.com/
+URL:https://thiepcuoi.aiglobalvn.com/
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Còn 3 ngày: tiệc cưới Đức Hoà & Thuý Hằng
+TRIGGER:PT0M
+END:VALARM
+END:VEVENT
+END:VCALENDAR
