@@ -179,11 +179,12 @@ svg{display:block;max-width:100%}
 .seal::before{content:"";position:absolute;inset:-9px;border-radius:50%;border:1px solid var(--gold);animation:ring 2.4s ease-out infinite}
 @keyframes ring{0%{transform:scale(.85);opacity:.9}100%{transform:scale(1.35);opacity:0}}
 .seal span{font-family:var(--f-han);font-weight:900;font-size:46px;line-height:1}
-.seal .prog{position:absolute;left:-15px;top:-15px;width:126px;height:126px;max-width:none;transform:rotate(-90deg);pointer-events:none}
-.seal .prog circle{fill:none;stroke:var(--gold-hi);stroke-width:2.2;stroke-linecap:round;stroke-dasharray:100;stroke-dashoffset:100;animation:prog 3s linear forwards}
-@keyframes prog{to{stroke-dashoffset:0}}
-.i-tap{margin-top:22px;font:600 10.5px/1.7 var(--f-body);letter-spacing:.24em;text-transform:uppercase;color:var(--gold);animation:floaty 2.4s ease-in-out infinite}
-.i-tap b{font-size:13px;color:#fff3d6}
+.seal .hand{position:absolute;right:-24px;bottom:-26px;width:48px;height:48px;max-width:none;pointer-events:none;filter:drop-shadow(0 4px 6px rgba(0,0,0,.35));animation:tap 1.4s ease-in-out infinite}
+@keyframes tap{0%,100%{transform:translate(0,0) scale(1)}40%{transform:translate(-7px,-9px) scale(.94)}55%{transform:translate(-7px,-9px) scale(.86)}}
+.cta{margin-top:30px}
+.cta-btn{display:inline-block;padding:14px 28px;border-radius:999px;background:linear-gradient(180deg,#fff0c4,#e7c06a 60%,#c99a3e);color:var(--red-deep);font:700 15px/1 var(--f-body);letter-spacing:.14em;text-transform:uppercase;animation:ctaPulse 1.6s ease-out infinite}
+@keyframes ctaPulse{0%{box-shadow:0 0 0 0 rgba(246,213,142,.8),0 10px 24px -8px rgba(0,0,0,.45);transform:scale(1)}50%{transform:scale(1.06)}100%{box-shadow:0 0 0 20px rgba(246,213,142,0),0 10px 24px -8px rgba(0,0,0,.45);transform:scale(1)}}
+.i-tap{margin-top:18px;font:600 11px/1.7 var(--f-body);letter-spacing:.18em;text-transform:uppercase;color:#fff3d6;animation:floaty 2.4s ease-in-out infinite}
 .i-to{margin-top:22px;font-size:13px;letter-spacing:.06em;opacity:.85}
 .i-to b{display:block;margin-top:4px;font-family:var(--f-hand);font-weight:600;font-size:30px;line-height:1.25;letter-spacing:0;overflow-wrap:anywhere;animation:write 1.8s ease-in-out .5s both}
 .intro.open .intro-c,.intro.open .i-art{opacity:0;transform:scale(.97)}
@@ -252,8 +253,9 @@ svg{display:block;max-width:100%}
     <p class="i-kick">Thiệp mời cưới</p>
     <p class="i-names">Đức Hoà<span>&amp;</span>Thuý Hằng</p>
     <p class="i-date">29 · 12 · 2026</p>
-    <button class="seal" id="open-btn" type="button" aria-label="Mở thiệp"><span>囍</span><svg class="prog" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="47" pathLength="100"/></svg></button>
-    <p class="i-tap" id="i-tap">Chạm để mở thiệp và nghe nhạc<br>hoặc thiệp tự mở sau <b id="i-sec">3</b> giây</p>
+    <button class="seal" id="open-btn" type="button" aria-label="Chạm để mở thiệp"><span>囍</span><svg class="hand" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 11.5V4.6a1.6 1.6 0 0 1 3.2 0V10m0 0V8.9a1.6 1.6 0 0 1 3.2 0V11m0-.4a1.6 1.6 0 0 1 3.2 0v3.6a6.6 6.6 0 0 1-6.6 6.6h-.9a6.6 6.6 0 0 1-5.4-2.8L3 14.6a1.6 1.6 0 0 1 2.6-1.9L9 15.4" fill="#fff6dd" stroke="#8f111d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    <p class="cta"><span class="cta-btn">♪ Chạm để mở thiệp</span></p>
+    <p class="i-tap">Chạm vào bất kỳ đâu trên màn hình<br>để mở thiệp và nghe nhạc</p>
     <p class="i-to">Kính gửi<b data-guest>Quý khách</b></p>
   </div>
 </div>
@@ -543,12 +545,8 @@ function openCard() {
   setTimeout(() => { if (maker.hidden) AS.start(); }, 3600);
   setTimeout(() => musicHint(), 1800);
 }
-intro.addEventListener("click", openCard);
-/* thiệp tự mở sau 3 giây */
-let left = 3;
-const secEl = document.getElementById("i-sec");
-secT = setInterval(() => { left--; if (secEl) secEl.textContent = Math.max(0, left); if (left <= 0) clearInterval(secT); }, 1000);
-autoT = setTimeout(openCard, 3000);
+/* khách chạm vào bất kỳ đâu trên màn hình mở thiệp để mở; cú chạm này cũng bật nhạc */
+["pointerup", "touchend", "click"].forEach(ev => intro.addEventListener(ev, openCard));
 
 /* thông báo & tạo link mời riêng (#tao-link) */
 const toast = document.getElementById("toast"); let tt;
