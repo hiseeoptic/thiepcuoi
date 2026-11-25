@@ -63,6 +63,15 @@ svg{display:block;max-width:100%}
 .hy{position:relative;overflow:hidden;width:112px;height:112px;margin:18px auto 4px;border-radius:50%;display:grid;place-items:center;background:var(--seal-bg);box-shadow:0 0 0 4px var(--red-deep),0 0 0 5px rgba(246,213,142,.7),0 16px 30px rgba(0,0,0,.35)}
 .hy span{font-family:var(--f-han);font-weight:900;font-size:64px;line-height:1;color:var(--red-deep)}
 .hy::after{content:"";position:absolute;inset:-40%;background:linear-gradient(105deg, transparent 40%, rgba(255,255,255,.55) 50%, transparent 60%);transform:translateX(-80%);animation:shine 4s ease-in-out 1.2s infinite}
+.photo{position:relative;width:min(300px, 76vw);max-width:100%;aspect-ratio:840/1124;margin:18px auto 0;padding:6px;border-radius:999px 999px 16px 16px;background:linear-gradient(180deg,#fff0c4,#e7c06a 45%,#b88a32);box-shadow:0 26px 50px -20px rgba(0,0,0,.6)}
+.photo picture,.photo img{display:block;width:100%;height:100%}
+.photo picture{overflow:hidden;border-radius:999px 999px 11px 11px}
+.photo img{max-width:100%;object-fit:cover;object-position:50% 18%}
+.photo::after{content:"";position:absolute;inset:14px;border:1px solid rgba(255,240,196,.75);border-radius:999px 999px 8px 8px;pointer-events:none}
+.go .photo img{animation:kb 7s ease-out both}
+@keyframes kb{from{transform:scale(1.08)}to{transform:none}}
+.photo + .hy{z-index:2;width:92px;height:92px;margin:-48px auto 4px}
+.photo + .hy span{font-size:52px}
 .h-names{margin-top:12px;display:flex;flex-direction:column;align-items:center;font-family:var(--f-names);font-weight:400;font-size:clamp(54px, 14.5vw, 84px);line-height:1.08;background:var(--gold-text);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:var(--gold)}
 .h-names .amp{font-family:var(--f-display);font-style:italic;font-size:.34em;line-height:1;margin:.1em 0 .18em;-webkit-text-fill-color:var(--gold)}
 .h-date{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;row-gap:6px;margin-top:20px;font:600 12px/1.2 var(--f-body);letter-spacing:.22em;text-transform:uppercase;font-variant-numeric:lining-nums}
@@ -265,11 +274,12 @@ svg{display:block;max-width:100%}
     <div class="lan r"><svg viewBox="0 0 60 116" aria-hidden="true"><use href="#lantern"/></svg></div>
     <div class="wrap h-in">
       <p class="kick" style="--k:0">Thiệp mời cưới</p>
-      <div class="hy" style="--k:1"><span>囍</span></div>
-      <h1 class="h-names" style="--k:2"><span>Đức Hoà</span><span class="amp">&amp;</span><span>Thuý Hằng</span></h1>
-      <div class="h-date" style="--k:3"><span>Thứ Ba</span><b>29.12.2026</b><span>11:15</span></div>
-      <p class="h-lunar" style="--k:4">Nhằm ngày 21 tháng 11 năm Bính Ngọ</p>
-      <div class="h-guest" style="--k:5"><span class="kick">Trân trọng kính mời</span><span class="g" data-guest>Quý khách</span></div>
+      <figure class="photo" style="--k:1"><picture><source srcset="anh-cuoi.webp" type="image/webp"><img src="anh-cuoi.jpg" alt="Ảnh cưới Đức Hoà và Thuý Hằng" width="840" height="1124" fetchpriority="high" decoding="async"></picture></figure>
+      <div class="hy" style="--k:2"><span>囍</span></div>
+      <h1 class="h-names" style="--k:3"><span>Đức Hoà</span><span class="amp">&amp;</span><span>Thuý Hằng</span></h1>
+      <div class="h-date" style="--k:4"><span>Thứ Ba</span><b>29.12.2026</b><span>11:15</span></div>
+      <p class="h-lunar" style="--k:5">Nhằm ngày 21 tháng 11 năm Bính Ngọ</p>
+      <div class="h-guest" style="--k:6"><span class="kick">Trân trọng kính mời</span><span class="g" data-guest>Quý khách</span></div>
     </div>
     <div class="scallop"></div>
   </header>
